@@ -11,7 +11,7 @@ public class APOController {
 		System.out.println("price: " + part.getPrice());
 		*/
 		
-		Buyer tom = new Buyer();
+		Buyer tom = new Buyer(400);
 		Buyer george = new Buyer(400);
 		Buyer sam = new Buyer(500);
 		
