@@ -20,6 +20,10 @@ public class Lottery {
 	 */
 
 	public static void main(String[] args) {
+		
+		System.out.println(NumberGenerator.generateUniqueNumbers(5, 49));
+		
+		/*
 		Draw draw = new Draw();
 
 		ArrayList<Integer> ticketNumbers = new ArrayList<Integer>(Arrays.asList(2, 5, 13, 25, 38));
@@ -38,5 +42,6 @@ public class Lottery {
 
 		draw.runLottery();
 		draw.displayResults();
+		*/
 	}
 }
