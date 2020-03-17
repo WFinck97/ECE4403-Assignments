@@ -11,7 +11,10 @@ public class NumberGenerator {
 			
 			uniqueNum = randNum.nextInt(maxVal) + 1;
 			
-			numberSet.add(randNum.nextInt(maxVal) + 1);
+			if(!numberSet.contains(uniqueNum)) {
+				i++;
+				numberSet.add(uniqueNum);
+			}
 		}
 		
 		return numberSet;
