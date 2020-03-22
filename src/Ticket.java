@@ -8,9 +8,7 @@ public class Ticket {
 	private boolean checked = false;
 	
 	public Ticket() {
-		ticketNumbers = NumberGenerator.generateUniqueNumbers(5, 49);
-		ticketNum++;
-		ticketId = ticketNum;
+		this(NumberGenerator.generateUniqueNumbers(5, 49));
 	}
 	
 	public Ticket(ArrayList<Integer> prefNumbers) {
