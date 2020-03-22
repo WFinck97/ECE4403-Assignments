@@ -2,23 +2,19 @@ import java.util.ArrayList;
 
 public class Draw {
 	
-	private ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
+	private ArrayList<Ticket> ticketList;
 	private int wins;
 	private ArrayList<Integer> winningNumbers;
 	
+	public Draw() {
+		ticketList = new ArrayList<Ticket>();
+	}
 	public void addTicket(Ticket ticket) {
 		ticketList.add(ticket);
 	}
 	
 	public void runLottery() {
-		winningNumbers = NumberGenerator.generateUniqueNumbers(5, 49);
-		wins = 0;
-		
-		for(Ticket ticket : ticketList) {
-			if(ticket.check(winningNumbers) > 2) {
-				wins++;
-			}
-		}
+		runLottery(NumberGenerator.generateUniqueNumbers(5, 49));
 	}
 	
 	public void runLottery(ArrayList<Integer> winningNumbers) {
